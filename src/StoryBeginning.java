@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Story {
+public class StoryBeginning {
     private static Scanner input = new Scanner(System.in);
 
     // This is the method that will be used to begin the story
@@ -68,7 +68,7 @@ public class Story {
             switch (input.nextInt()) {
             case 1:
                 // Add a scene here
-
+                scene1a();
                 validInput = true;
                 break;
             case 2:
