@@ -174,17 +174,17 @@ public class StoryBeginning {
         Output.delayMilliseconds(1000);
         System.out.println();
         System.out.println();
-        Output.type("TRANSMISSION TERMINATED");
+        Output.type("TRANSMISSION TERMINATED", Colors.ANSI_RED);
         System.out.println();
         Output.delayWithDots(10);
         System.out.println();
         System.out.println();
-        Output.type("ATTEMPTING RECONNECTION . . . ");
+        Output.type("ATTEMPTING RECONNECTION . . . ", Colors.ANSI_YELLOW);
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
         System.out.println();
-        Output.type("RECONNECTION UNSUCCESSFUL");
+        Output.type("RECONNECTION UNSUCCESSFUL", Colors.ANSI_RED);
         System.out.println();
         System.out.println();
         Output.type("TRY AGAIN?");
@@ -215,12 +215,12 @@ public class StoryBeginning {
 
     public static void reconnect() {
         System.out.println();
-        Output.type("ATTEMPTING RECONNECTION . . . ");
+        Output.type("ATTEMPTING RECONNECTION . . . ", Colors.ANSI_YELLOW);
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
         System.out.println();
-        Output.type("RECONNECTION SUCCESSFUL");
+        Output.type("RECONNECTION SUCCESSFUL", Colors.ANSI_GREEN);
         System.out.println();
         Output.type("SEND MESSAGE:");
         System.out.println("\n");
@@ -248,9 +248,9 @@ public class StoryBeginning {
     }
 
     public static void disconnect() {
-        Output.type("TRANSMISSION PERMANENTLY TERMINATED");
+        Output.type("TRANSMISSION PERMANENTLY TERMINATED", Colors.ANSI_RED);
         System.out.println();
-        Output.type("MISSION FAILED");
+        Output.type("MISSION FAILED", Colors.ANSI_RED);
         System.out.println("\n");
 
         Output.choices("Go back to last crucial decision", "End game");
@@ -315,10 +315,41 @@ public class StoryBeginning {
     }
 
     public static void scene3a() {
-        Output.type("Thank you.", Colors.ANSI_BLUE);
+        Output.type("Thank you.");
         Output.delayMilliseconds(1000);
-        Output.type(" I need to somehow stabalize the oxygen across the facility.", Colors.ANSI_YELLOW);
-        Output.type(" How do");
+        Output.type(" I need to somehow stabalize the oxygen across the facility before the backup oxygen runs out.");
+        Output.delayMilliseconds(1000);
+        System.out.println();
+        Output.type("Well");
+        Output.delayWithDots(3);
+        Output.type("I need to first refill my oxygen tank before depressurizing this room.");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.type("Now how do I go about this?");
+        Output.delayWithDots(4);
+        System.out.println("\n");
+
+        Output.choices("Search the room.", "How long can you hold your breath?");
+
+        // Determine which path to take based off of user input
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                // insert a scene here
+
+                validInput = true;
+                break;
+            case 2:
+                // insert a scene here
+
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
+            }
+        }
     }
 
     public static void transitionScene() {
