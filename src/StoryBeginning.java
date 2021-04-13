@@ -6,7 +6,7 @@ public class StoryBeginning {
     // This is the method that will be used to begin the story
     public static void start() {
         // Type out words
-        Output.type("INCOMING TRANSMISSION");
+        Output.type("INCOMING TRANSMISSION", Colors.ANSI_GREEN);
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
@@ -319,5 +319,37 @@ public class StoryBeginning {
         Output.delayMilliseconds(1000);
         Output.type(" I need to somehow stabalize the oxygen across the facility.", Colors.ANSI_YELLOW);
         Output.type(" How do");
+    }
+
+    public static void transitionScene() {
+        Output.type("It worked!");
+        Output.delayMilliseconds(700);
+        Output.type(" The door opened up!");
+        Output.delayMilliseconds(1000);
+        System.out.println();
+        Output.type(
+                "I should probably go stablize the oxygen across the facility before the backup oxygen in my pack runs out.");
+        System.out.println("\n");
+        Output.choices("Great idea!", "Be careful!");
+
+        // Determine which path to take based off of user input
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                // insert a scene here
+
+                validInput = true;
+                break;
+            case 2:
+                // insert a scene here
+
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
+            }
+        }
     }
 }
