@@ -338,12 +338,109 @@ public class StoryBeginning {
             switch (input.nextInt()) {
             case 1:
                 // insert a scene here
-
+                scene3b(false);
                 validInput = true;
                 break;
             case 2:
                 // insert a scene here
+                scene3c();
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
+            }
+        }
+    }
 
+    public static void scene3b(boolean spooked) {
+        if (spooked) {
+            Output.delayWithDots(4);
+            Output.type("I don't like that you are even considering holding my breath as an option.");
+            Output.delayWithDots(4);
+            System.out.println();
+            Output.type("Lets agree to make holding my breath as a last resort");
+            Output.delayWithDots(4);
+            System.out.println();
+            Output.type("Now to searching the room.");
+            Output.delayMilliseconds(700);
+            System.out.println();
+        } else {
+            Output.delayMilliseconds(1000);
+            Output.type("Thats a great idea!");
+        }
+    }
+
+    public static void scene3c() {
+        Output.type("Uhhhhh about a minute");
+        Output.delayWithDots(3);
+        Output.type("Why?");
+        System.out.println("\n");
+
+        Output.choices("Depressurize the room and go find a full tank of oxygen to attatch to your suit.",
+                "Just wondering. You should probably search the room before we worry about that though.");
+
+        // Determine which path to take based off of user input
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                // insert a scene here
+                depressurizeEarly();
+                validInput = true;
+                break;
+            case 2:
+                // insert a scene here
+                scene3b(true);
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
+            }
+        }
+    }
+
+    public static void depressurizeEarly() {
+        Output.delayMilliseconds(1000);
+        Output.type("Oh man");
+        Output.delayWithDots(3);
+        Output.type("You're crazy.");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.type("I trust you though");
+        Output.delayWithDots(3);
+        Output.type("Here goes nothing.");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.delayWithDots(7);
+        System.out.println("\n");
+        Output.type("CONNECTION LOST", Colors.ANSI_RED);
+        Output.delayWithDots(3);
+        System.out.println("\n");
+        Output.type("ATTEMPTING RECONNECTION", Colors.ANSI_YELLOW);
+        Output.delayWithDots(7);
+        System.out.println("\n");
+        Output.type("RECONNECTION FAILED", Colors.ANSI_RED);
+        Output.delayWithDots(3);
+        System.out.println("\n");
+        Output.type("TRANSMISSION PERMANENTLY TERMINATED", Colors.ANSI_RED);
+        System.out.println("\n");
+        Output.type("MISSION FAILED", Colors.ANSI_RED);
+        System.out.println("\n");
+        System.out.print(Colors.ANSI_RESET);
+
+        Output.choices("Go back to last crucial decision?", "End game.");
+
+        // Determine which path to take based off of user input
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                scene3c();
+                validInput = true;
+                break;
+            case 2:
                 validInput = true;
                 break;
             default:
