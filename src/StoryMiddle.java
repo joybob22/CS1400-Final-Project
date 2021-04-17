@@ -102,13 +102,11 @@ public class StoryMiddle {
 
         Output.choices("Listen to logs", "Roll out!");
 
-        // Determine which path to take based off of user input
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                // Add a scene here
                 battery1(true);
                 validInput = true;
                 break;
@@ -129,13 +127,13 @@ public class StoryMiddle {
 
         Output.choices("Repair the battery.", "Risk another route.");
 
-        // Determine which path to take based off of user input
+        // Choose path
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                // Add a scene here
+                // Add scene 
                 rover2();
                 validInput = true;
                 break;
@@ -169,7 +167,7 @@ public class StoryMiddle {
         System.out.println("\n");
         Output.choices("You gonna just go?", "Take the time to make sure auxillary power lasts.");
 
-        // Determine which path to take based off of user input
+        // choosing path
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
@@ -205,18 +203,18 @@ public class StoryMiddle {
 
         Output.choices("Search the room one final time.", "Use only your space suit!?");
 
-        // Determine which path to take based off of user input
+        // choosing path
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                // insert a scene here
+                //scene 
 
                 validInput = true;
                 break;
             case 2:
-                // insert a scene here
+                //scene 
 
                 validInput = true;
                 break;
@@ -237,18 +235,15 @@ public class StoryMiddle {
         System.out.println("\n");
         Output.choices("Make a break for it!", "Stay inside main base!");
 
-        // Determine which path to take based off of user input
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                // insert a scene here
 
                 validInput = true;
                 break;
             case 2:
-                // insert a scene here
 
                 validInput = true;
                 break;
