@@ -114,7 +114,7 @@ public class StoryBeginning {
         Output.type(
                 "My air tank only had about 5 minutes thanks to my laziness of not wanting to refill it last night after our trip from pod 37B.");
         System.out.println();
-        Output.type("I had to act quick so I ran faster than I have ever ran before -- directly to the comms room.");
+        Output.type("I had to act quick so I ran faster than I have ever run before -- directly to the comms room.");
         System.out.println();
         Output.type("Once I got here I engaged the airlock on the door and prayed the backup oxygen would kick in.");
         System.out.println();
@@ -556,7 +556,7 @@ public class StoryBeginning {
         Output.type(" Lets see what else we got in this room.");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type("Theres some drawers I can look through.");
+        Output.type("Theres some drawers I can look through. ");
         Output.delayWithDots(4);
         System.out.println("\n");
         Output.type("OXYGEN LOGS: BACKUP OXYGEN RUNNING LOW.", Colors.ANSI_YELLOW);
@@ -668,7 +668,7 @@ public class StoryBeginning {
         Output.delayWithDots(3);
         Output.type(" Here goes nothing!");
         System.out.println();
-        Output.delayMilliseconds(7);
+        Output.delayWithDots(7);
         System.out.println("\n");
         Output.type("OXYGEN LOGS: ALL OXYGEN DIVERTING TO ROOM -- COMMS!", Colors.ANSI_YELLOW);
         System.out.println("\n");
@@ -758,7 +758,7 @@ public class StoryBeginning {
         System.out.println();
         Output.type("Still no luck.");
         Output.delayMilliseconds(700);
-        Output.type("I'll keep trying!");
+        Output.type(" I'll keep trying!");
         System.out.println();
         Output.delayWithDots(7);
         Output.delayMilliseconds(1000);
@@ -859,7 +859,7 @@ public class StoryBeginning {
         System.out.println("\n");
         Output.type("Oh wow that was close!");
         Output.delayMilliseconds(700);
-        Output.type("I was literally blacking out as I put my helmet on!");
+        Output.type(" I was literally blacking out as I put my helmet on!");
         Output.delayMilliseconds(700);
         System.out.println();
         Output.type("The metrics read that I have a couple days of oxygen in this tank.");
@@ -873,36 +873,5 @@ public class StoryBeginning {
         Output.delayWithDots(7);
         System.out.println();
         StoryMiddle.storyMiddle1();
-    }
-
-    public static void transitionScene() {
-        Output.type("It worked!");
-        Output.delayMilliseconds(700);
-        Output.type(" The door opened up!");
-        Output.delayMilliseconds(1000);
-        System.out.println();
-        Output.type(
-                "I should probably go stablize the oxygen across the facility before the backup oxygen in my pack runs out.");
-        System.out.println("\n");
-        Output.choices("Great idea!", "Be careful!");
-
-        // Determine which path to take based off of user input
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-                // insert a scene here
-                validInput = true;
-                break;
-            case 2:
-                // insert a scene here
-
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        }
     }
 }
