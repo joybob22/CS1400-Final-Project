@@ -28,6 +28,11 @@ public class StoryMiddle {
         
        }
        }
+       public static void storyMiddle2(boolean mid){
+       
+       }
+       
+       
        public static void scene1(boolean wait) {
 
        System.out.println();
@@ -62,6 +67,11 @@ public class StoryMiddle {
         }
 
     }
+   // public static repair(boolean fix){
+       
+       
+       
+
     
   public static void garage(boolean searching) {
     if (searching) {
