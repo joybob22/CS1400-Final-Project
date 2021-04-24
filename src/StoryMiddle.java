@@ -7,8 +7,10 @@ public class StoryMiddle {
        public static void storyMiddle1() {
        Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
        System.out.println();
-       Output.type("I could get through this I know it. If I start exploring I may burn up this energy.");
+       Output.type("I could get through this I know it. If I start exploring I may burn up this little energy.");
        Output.delayWithDots(3);
+       Output.type("Well I can not afford to sit around and find out, I gotta move");
+
        System.out.println();
 
        Output.choices("Continue exploring base", "Wait for contact?");
@@ -17,10 +19,11 @@ public class StoryMiddle {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                storyMiddle2();
+                storyMid2();
                 validInput = true;
                 break;
             case 2:
+                storyMiddle2();
                 validInput = true;
                 break;
             default:
@@ -29,17 +32,48 @@ public class StoryMiddle {
         }
 
     }
+    
+public static void storyMid2(){
+   Output.type("You begin running around the base, only to have a steel beam impale you.");
+
+
+   
+
+   Output.choices("Go back to last crucial decision", "End Game");
+   
+           // Determine which path to take based off of user input
+           boolean validInput = false;
+           while (!validInput) {
+               System.out.print("\nEnter choice: ");
+               switch (input.nextInt()) {
+               case 1:
+                   storyMiddle1();
+                   validInput = true;
+                   break;
+               case 2:
+                   validInput = true;
+                   break;
+               default:
+                   System.out.println("Invalid input");
+            }
+        }
+
+    }
+
+
 public static void storyMiddle2() {
        
         Output.type("Welp, I have nothing left to do but to wait");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println("\n");
-        Output.type("Oh no there is a crack in my helmet glass!");
+        Output.type("Oh no wait... there is a crack in my helmet glass!");
         System.out.println("\n");
         Output.delayWithDots(3);
         System.out.println("\n");
+        Output.type("If I started exploring i'd have died!");
         Output.type("let me patch that before moving on!");
+
         Output.delayMilliseconds(700);
         System.out.println("\n");
         Output.type("Got it... thank god it patched othertwise i'd be in big trouble.");
@@ -53,11 +87,13 @@ public static void storyMiddle2() {
         Output.type(" I think i stopped it!");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type(" I need to get in the greenhouse.");
+        Output.type(" I need to get in the COMMS Room.");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type("I've gotta repair this or wait....I can definately get into that garage!");
+        Output.type("I've gotta repair communication or wait a sec...I can definately get into that garage!");
         System.out.println();
+        Output.type(" The warning lights are going off in the COMMS room though, might be risky.");
+
         
         System.out.println("\n");
 
@@ -76,7 +112,7 @@ public static void storyMiddle2() {
                 break;
             case 2:
                 // insert a scene here
-                breakDoorWithAxe();
+                breakDoor();
                 validInput = true;
                 break;
             default:
@@ -89,39 +125,40 @@ public static void storyMiddle2() {
        
       public static void commsRoom() {
         System.out.println();
-        Output.type("");
+        Output.type("Uh-oh this might have been a bad call");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println();
-        Output.type("");
+        Output.type("I see the emergency power switch");
         Output.delayMilliseconds(700);
-        Output.type(" ");
+        Output.type(" There is a puddle on the ground");
         System.out.println();
         Output.delayWithDots(3);
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("");
+        Output.type("I do'nt know what it is but I better avoid it");
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("");
+        Output.type("It is only a couple feet wide I can jump it.");
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("");
+        Output.type("Better that than walk through it, I see exposed wires everywhere");
         Output.delayMilliseconds(700);
-        Output.type(" ");
+        Output.type(" Plus I dunno what the liquid is.");
         System.out.println();
         Output.delayWithDots(5);
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("");
+        Output.type("**As you clear the puddle upon landing a wire gets dislodged from the ceiling**");
         Output.delayMilliseconds(700);
         System.out.println("\n");
         Output.delayWithDots(3);
         System.out.println();
-        Output.type("");
+        Output.type("UH-OH");
         System.out.println("\n");
-        Output.type("");
+        Output.type("The wire hits your chest with and couple million volts come with it");
         System.out.println("\n");
+        Output.type("...DEAD");
 
         Output.choices("Go back to last crucial decision", "End Game");
 
@@ -144,39 +181,39 @@ public static void storyMiddle2() {
 
     }
 
-    public static void breakDoorWithAxe() {
+    public static void breakDoor() {
         System.out.println();
-        Output.type("...");
+        Output.type("I got in!");
         Output.delayMilliseconds(700);
-        Output.type(" ...");
+        Output.type(" The Rover!!");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println();
-        Output.type("...");
+        Output.type("...If I can take this we will be golden");
         Output.delayMilliseconds(700);
-        Output.type(" ...");
+        Output.type(" I just may make it out of here");
         Output.delayMilliseconds(700);
         System.out.println();
         Output.type("Well");
         Output.delayWithDots(3);
-        Output.type(" ...");
+        Output.type(" Oh no the Rover is dead");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println();
-        Output.type("...");
+        Output.type("This can not be happening, I have gotta find a way.");
         Output.delayMilliseconds(700);
-        Output.type(" ...");
+        Output.type(" I see an audio log from the former crew i'll play that.");
         System.out.println();
         Output.delayWithDots(7);
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("...");
+        Output.type("***If anyone hears this the Rover needs to be charged before you can use it***");
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("...");
+        Output.type("***We did'nt have the time, an emergency power cell is in here use it***");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type("...");
+        Output.type("***you may get further than we did, we were forced to carry on on foot***");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println();
