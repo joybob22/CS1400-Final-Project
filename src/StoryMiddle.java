@@ -7,6 +7,7 @@ public class StoryMiddle {
        public static void storyMiddle1() {
        Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
        System.out.println();
+       Output.type("I could get through this I know it. If I start exploring I may burn up this energy.");
        Output.delayWithDots(3);
        System.out.println();
 
@@ -30,7 +31,7 @@ public class StoryMiddle {
     }
 public static void storyMiddle2() {
        
-        Output.type("Welp, I have nothing left but to wait");
+        Output.type("Welp, I have nothing left to do but to wait");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println("\n");
@@ -41,11 +42,11 @@ public static void storyMiddle2() {
         Output.type("let me patch that before moving on!");
         Output.delayMilliseconds(700);
         System.out.println("\n");
-        Output.type("Got it");
+        Output.type("Got it... thank god it patched othertwise i'd be in big trouble.");
         Output.delayMilliseconds(700);
         System.out.println("\n");
         Output.type("Whew!");
-        Output.delayMilliseconds(1000);
+        Output.delayMilliseconds(700);
         System.out.println("\n");
         Output.type("Yes, too close!");
         Output.delayMilliseconds(700);
@@ -55,12 +56,12 @@ public static void storyMiddle2() {
         Output.type(" I need to get in the greenhouse.");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type("I've gotta repair this or wait....I can get in that garage!");
+        Output.type("I've gotta repair this or wait....I can definately get into that garage!");
         System.out.println();
         
         System.out.println("\n");
 
-        Output.choices("Comms!", "Break down the door to garage!");
+        Output.choices("Comms room STAT!", "Break down the door to garage!");
 
 
        
@@ -70,7 +71,7 @@ public static void storyMiddle2() {
             switch (input.nextInt()) {
             case 1:
                 // insert a scene here
-                tryKeys();
+                commsRoom();
                 validInput = true;
                 break;
             case 2:
@@ -86,7 +87,7 @@ public static void storyMiddle2() {
 
 
        
-      public static void tryKeys() {
+      public static void commsRoom() {
         System.out.println();
         Output.type("");
         System.out.println();
