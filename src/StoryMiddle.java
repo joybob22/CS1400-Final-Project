@@ -33,11 +33,11 @@ public class StoryMiddle {
        System.out.println();
        Output.type("Wait");
        if (wait) {
-            Output.type(" I noticed a leak in the airline.");
+            Output.type("I noticed a leak in the airline.");
             Output.delayMilliseconds(700);
-            Output.type(" That will have to be fixed and you can continue, Or chance it and run.");
+            Output.type("That will have to be fixed and you can continue, Or chance it and run.");
         } else {
-            Output.type(" You run to the garage and oxygen runs out...");
+            Output.type("You run to the garage and oxygen runs out...");
         }
         System.out.println("\n");
         
