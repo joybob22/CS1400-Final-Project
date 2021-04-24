@@ -5,60 +5,21 @@ public class StoryMiddle {
    private static Scanner input = new Scanner(System.in);
    
        public static void storyMiddle1() {
-       Output.type("Door is open, do I keep exploring or chance it, wait, and hope?");
+       Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
        System.out.println();
        Output.delayWithDots(3);
+       System.out.println();
+
        Output.choices("Continue exploring base", "Wait for contact?");
-       
        boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                storyMiddle2(false);
+                storyMiddle2();
                 validInput = true;
                 break;
             case 2:
-                storyMiddle2(true);
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        
-       }
-       }
-       public static void storyMiddle2(boolean mid){
-       
-       }
-       
-       
-       public static void scene1(boolean wait) {
-
-       System.out.println();
-       Output.type("Wait");
-       if (wait) {
-            Output.type(" I noticed a leak in the airline.");
-            Output.delayMilliseconds(700);
-            Output.type(" That will have to be fixed and you can continue, Or chance it and run.");
-        } else {
-            Output.type(" You run to the garage and oxygen runs out...");
-        }
-        System.out.println("\n");
-        
-        Output.choices("Are you going to go outside to seal it?"," Will you go stay/wait in the greenhouse?");
-
-
-   boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-                repair(false);
-                validInput = true;
-                break;
-            case 2:
-                repair(true);
                 validInput = true;
                 break;
             default:
@@ -67,201 +28,190 @@ public class StoryMiddle {
         }
 
     }
-   // public static repair(boolean fix){
+public static void storyMiddle2() {
        
-       
-       
-
-    
-  public static void garage(boolean searching) {
-    if (searching) {
-     Output.type("Continue searching base and you find a comms room and garage. ");
-     System.out.println();
-     Output.delayWithDots(3);
-     Output.type("You see live dangling wires in Comms Room");
-     System.out.println();
-     Output.type("Through the Garage door window you see the Rover, and an audio log next to it!");
-}
-   Output.choices("Comms Room?", "Garage?");
-   boolean validInput = false;
-   while (!validInput) {
-    System.out.print("\nEnter choice: ");
-    switch (input.nextInt()) {
-     case 1:
-        garage1();
-        validInput = true;
-        break;
-     case 2:
-        garage2();
-        validInput = true;
-        break;
-        default:
-        System.out.println("Invalid input");
-        }
-      }
-   }
-   public static void battery() {
+        Output.type("Welp, I have nothing left but to wait");
         System.out.println();
-        Output.type("Do you wait to listen to logs or jump in the Rover and bounce ", Colors.ANSI_YELLOW);
+        Output.delayWithDots(3);
+        System.out.println("\n");
+        Output.type("Oh no there is a crackin my helmet glass!");
+        System.out.println("\n");
+        Output.delayWithDots(3);
+        System.out.println("\n");
+        Output.type("let me patch that before moving on!");
+        Output.delayMilliseconds(700);
+        System.out.println("\n");
+        Output.type("Got it");
+        Output.delayMilliseconds(700);
+        System.out.println("\n");
+        Output.type("Whew!");
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("Yes, too close!");
+        Output.delayMilliseconds(700);
+        Output.type(" I think i stopped it!");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.type(" I need to get in the greenhouse.");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.type("I've gotta repair this or wait.");
+        System.out.println();
+        
+        System.out.println("\n");
+
+        Output.choices("Comms!", "Break down the door to garage!");
+
+
+       
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                // insert a scene here
+                tryKeys();
+                validInput = true;
+                break;
+            case 2:
+                // insert a scene here
+                breakDoorWithAxe();
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
+            }
+        }
+    }
+
+
+       
+      public static void tryKeys() {
+        System.out.println();
+        Output.type("Okay I will start trying these keys and let you know how it goes.");
+        System.out.println();
+        Output.delayWithDots(7);
+        System.out.println();
+        Output.type("Still no luck.");
+        Output.delayMilliseconds(700);
+        Output.type(" I'll keep trying!");
+        System.out.println();
+        Output.delayWithDots(7);
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("OXYGEN LOGS: BACKUP OXYGEN RUNNING LOW!");
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("OXYGEN LOGS: 5 MINUTES BEFORE OXYGEN DEPLETION!");
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("Oh no!");
+        Output.delayMilliseconds(700);
+        Output.type(" Hopefully these next few keys are the right one!");
+        System.out.println();
+        Output.delayWithDots(5);
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("OXYGEN LOGS: BACKUP OXYGEN DEPLETED!");
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.delayWithDots(5);
+        System.out.println();
+        Output.type("TRANSMISSION TERMINATED");
+        System.out.println("\n");
+        Output.type("MISSION FAILED");
+        System.out.println("\n" + Colors.ANSI_RESET);
+
+        Output.choices("Go back to last crucial decision", "End Game");
+
+        // Determine which path to take based off of user input
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                storyMiddle1();
+                validInput = true;
+                break;
+            case 2:
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
+            }
+        }
+
+    }
+
+    public static void breakDoorWithAxe() {
+        System.out.println();
+        Output.type("I'll start swinging away!");
+        Output.delayMilliseconds(700);
+        Output.type(" Hopefully I am able to break through!");
+        System.out.println();
+        Output.delayWithDots(7);
+        System.out.println();
+        Output.type("Quick update: I made my first dent in the door.");
+        Output.delayMilliseconds(700);
+        Output.type(" This is proving to be very difficult.");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.type("Well");
+        Output.delayWithDots(3);
+        Output.type(" Back to swinging.");
+        System.out.println();
+        Output.delayWithDots(7);
+        System.out.println();
+        Output.type("Okay I have made a hole the size of a baseball.");
+        Output.delayMilliseconds(700);
+        Output.type(" This might actually be possible.");
+        System.out.println();
+        Output.delayWithDots(7);
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("OXYGEN LOGS: 5 MINUTES BEFORE OXYGEN DEPLETION!");
+        Output.delayMilliseconds(1000);
+        System.out.println("\n");
+        Output.type("I almost have created a large enough hole in the door to sqeeze into the closet!");
+        Output.delayMilliseconds(700);
+        System.out.println();
+        Output.type("I think I'll make it through in time!");
+        System.out.println();
+        Output.delayWithDots(5);
+        System.out.println();
+        Output.type("Okay I'm through!");
+        Output.delayMilliseconds(700);
+        Output.type(" Alright lets see what we got in here.");
         System.out.println();
         Output.delayWithDots(3);
         System.out.println();
-        Output.type("There must be a reason for leaving that, I hope the Rover is charged", Colors.ANSI_GREEN);
-        System.out.println();
+        Output.type("Yep we got a spare oxygen tank!");
+        Output.delayMilliseconds(1000);
         System.out.println("\n");
-
-        Output.choices("Listen to logs", "Roll out!");
-
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-                battery1(true);
-                validInput = true;
-                break;
-            case 2:
-                battery1(false);
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        }
-    }
-     public static void rover() {
-        Output.type("okay I see a battery repair kit, or there is another doorway but the pressure alarm is going off! ", Colors.ANSI_RED);
-        System.out.println();
-       
+        Output.type("OXYGEN LOGS: BACKUP OXYGEN DEPLETED!");
+        Output.delayMilliseconds(1000);
         System.out.println("\n");
-
-        Output.choices("Repair the battery.", "Risk another route.");
-
-        // Choose path
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-                // Add scene 
-                rover2();
-                validInput = true;
-                break;
-            case 2:
-
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        }
-    }
-
-    public static void charged(boolean sun) {
+        Output.delayWithDots(7);
+        System.out.println("\n");
+        Output.type("Oh wow that was close!");
         Output.delayMilliseconds(700);
-        if (sun) {
-            Output.type("The sun is setting...");
-            Output.delayMilliseconds(700);
-            Output.type(" I'm worried, oxygen and solar power are going to die soon.");
-            System.out.println();
-            Output.delayWithDots(3);
-            System.out.println();
-            Output.type("We are going to have to hurry and stay safe at the same time.");
-            Output.delayMilliseconds(700);
-            Output.type(" We need lights.");
-        } else {
-            Output.type("Im confused ");
-            Output.delayWithDots(3);
-            Output.type("Should I just go?!");
-        }
-        System.out.println("\n");
-        Output.choices("You gonna just go?", "Take the time to make sure auxillary power lasts.");
-
-        // choosing path
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-
-                validInput = true;
-                break;
-            case 2:
-
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        }
-    }
-
-    public static void searching() {
-        Output.type("Thank god the oxygen and lights will stay on.");
-        Output.delayMilliseconds(700);
-        Output.type(" We still do not have a lot of time.");
+        Output.type(" I was literally blacking out as I put my helmet on!");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type("Well I could try just using my suit to get there");
-        Output.delayWithDots(3);
-        Output.type("Or I could walk around one last time, I am missing something I know it.");
+        Output.type("The metrics read that I have a couple days of oxygen in this tank.");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type("Gotta make a choice");
-        Output.delayWithDots(4);
-        System.out.println("\n");
-
-        Output.choices("Search the room one final time.", "Use only your space suit!?");
-
-        // choosing path
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-                //scene 
-
-                validInput = true;
-                break;
-            case 2:
-                //scene 
-
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        }
-    }
-
-    public static void transitionScene2() {
-        Output.type("Found a map!");
-        Output.delayMilliseconds(700);
-        Output.type(" There is a shortcut to the escape ship pods! Or should I stay in here");
+        Output.type("That should be enough time get a game plan going!");
         Output.delayMilliseconds(700);
         System.out.println();
-        Output.type(
-                "Now to decide...");
-        System.out.println("\n");
-        Output.choices("Make a break for it!", "Stay inside main base!");
-
-        boolean validInput = false;
-        while (!validInput) {
-            System.out.print("\nEnter choice: ");
-            switch (input.nextInt()) {
-            case 1:
-
-                validInput = true;
-                break;
-            case 2:
-
-                validInput = true;
-                break;
-            default:
-                System.out.println("Invalid input");
-            }
-        }
+        Output.type("Now I'll depressuraize this room and get going!");
+        System.out.println();
+        Output.delayWithDots(7);
+        System.out.println();
+        StoryMiddle.storyMiddle1();
     }
 }
 
 
+
+      
