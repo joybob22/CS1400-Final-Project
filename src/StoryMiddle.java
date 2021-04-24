@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class StoryMiddle {
    
    private static Scanner input = new Scanner(System.in);
-   
+                                                   
+                                                      //Method my story continues from
+
        public static void storyMiddle1() {
        Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
        System.out.println();
@@ -13,12 +15,12 @@ public class StoryMiddle {
 
        System.out.println();
 
-       Output.choices("Continue exploring base", "Wait for contact?");
+       Output.choices("Continue exploring base", "Wait for contact?");  //Choices output
        boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
-            case 1:
+            case 1:                 //Calling a scene based off Choices
                 storyMid2();
                 validInput = true;
                 break;
@@ -41,7 +43,7 @@ public static void storyMid2(){
 
    Output.choices("Go back to last crucial decision", "End Game");
    
-           // Determine which path to take based off of user input
+                                       //Paths based on input depending on choice
            boolean validInput = false;
            while (!validInput) {
                System.out.print("\nEnter choice: ");
@@ -106,12 +108,12 @@ public static void storyMiddle2() {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
             case 1:
-                // insert a scene here
+                // scene here
                 commsRoom();
                 validInput = true;
                 break;
             case 2:
-                // insert a scene here
+                // scene here
                 breakDoor();
                 validInput = true;
                 break;
@@ -162,7 +164,7 @@ public static void storyMiddle2() {
 
         Output.choices("Go back to last crucial decision", "End Game");
 
-        // Determine which path to take based off of user input
+        // Continue choosing paths based on inout and what scene is called
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
@@ -236,7 +238,7 @@ public static void storyMiddle2() {
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
-        StoryMiddle.storyMiddle1();
+        StoryMiddle.storyMiddle1();   // segway further into story
     }
 }
 
