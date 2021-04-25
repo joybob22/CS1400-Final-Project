@@ -1,57 +1,38 @@
 import java.util.Scanner;
 
 public class StoryMiddle {
-   
-   private static Scanner input = new Scanner(System.in);
-                                                   
-                                                      //Method my story continues from
 
-       public static void storyMiddle1() {
-       Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
-       System.out.println();
-       Output.type("I could get through this I know it. If I start exploring I may burn up this little energy.");
-       Output.delayWithDots(3);
-       Output.type("Well I can not afford to sit around and find out, I gotta move");
+    private static Scanner input = new Scanner(System.in);
 
-       System.out.println();
-<<<<<<< HEAD
+    // Method my story continues from
 
-       Output.type("Wait");
-//        if (wait) {
-//             Output.type("I noticed a leak in the airline.");
-//             Output.delayMilliseconds(700);
-//             Output.type("That will have to be fixed and you can continue, Or chance it and run.");
-//         } else {
-//             Output.type("You run to the garage and oxygen runs out...");
-//         }
-=======
-<<<<<<< HEAD
-       Output.type("Wait");
-       if (wait) {
+    public static void storyMiddle1() {
+        Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
+        System.out.println();
+        Output.type("I could get through this I know it. If I start exploring I may burn up this little energy.");
+        Output.delayWithDots(3);
+        Output.type("Well I can not afford to sit around and find out, I gotta move");
+
+        System.out.println();
+        Output.type("Wait");
+        boolean wait = true;
+        if (wait) {
             Output.type("I noticed a leak in the airline.");
             Output.delayMilliseconds(700);
             Output.type("That will have to be fixed and you can continue, Or chance it and run.");
         } else {
             Output.type("You run to the garage and oxygen runs out...");
         }
->>>>>>> master
         System.out.println("\n");
-        
-        Output.choices("Are you going to go outside to seal it?"," Will you go stay/wait in the greenhouse?");
 
-=======
->>>>>>> f5ecb6693a07797bc54444cd5978fded6c596dad
+        Output.choices("Are you going to go outside to seal it?", " Will you go stay/wait in the greenhouse?");
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
-       Output.choices("Continue exploring base", "Wait for contact?");  //Choices output
-       boolean validInput = false;
+        Output.choices("Continue exploring base", "Wait for contact?"); // Choices output
+        boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
             switch (input.nextInt()) {
-            case 1:                 //Calling a scene based off Choices
+            case 1: // Calling a scene based off Choices
                 storyMid2();
                 validInput = true;
                 break;
@@ -65,61 +46,40 @@ public class StoryMiddle {
         }
 
     }
-    
-public static void storyMid2(){
-   Output.type("You begin running around the base, only to have a steel beam impale you.");
 
+    public static void storyMid2() {
+        Output.type("You begin running around the base, only to have a steel beam impale you.");
 
-   
+        Output.choices("Go back to last crucial decision", "End Game");
 
-   Output.choices("Go back to last crucial decision", "End Game");
-   
-                                       //Paths based on input depending on choice
-           boolean validInput = false;
-           while (!validInput) {
-               System.out.print("\nEnter choice: ");
-               switch (input.nextInt()) {
-               case 1:
-                   storyMiddle1();
-                   validInput = true;
-                   break;
-               case 2:
-                   validInput = true;
-                   break;
-               default:
-                   System.out.println("Invalid input");
+        // Paths based on input depending on choice
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.print("\nEnter choice: ");
+            switch (input.nextInt()) {
+            case 1:
+                storyMiddle1();
+                validInput = true;
+                break;
+            case 2:
+                validInput = true;
+                break;
+            default:
+                System.out.println("Invalid input");
             }
         }
 
     }
 
+    public static void storyMiddle2() {
 
-public static void storyMiddle2() {
-       
         Output.type("Welp, I have nothing left to do but to wait");
         System.out.println();
         Output.delayWithDots(3);
-<<<<<<< HEAD
-        System.out.println("\n");
-        Output.type("Oh no wait... there is a crack in my helmet glass!");
-        System.out.println("\n");
-        Output.delayWithDots(3);
-        System.out.println("\n");
-=======
-        System.out.println("\n");
-        Output.type("Oh no wait... there is a crack in my helmet glass!");
-        System.out.println("\n");
-        Output.delayWithDots(3);
-        System.out.println("\n");
->>>>>>> master
-        Output.type("If I started exploring i'd have died!");
-        Output.type("let me patch that before moving on!");
-
         Output.delayMilliseconds(700);
         System.out.println("\n");
         Output.type("Got it... thank god it patched othertwise i'd be in big trouble.");
         Output.delayMilliseconds(700);
-        System.out.println("\n");
         Output.type("Whew!");
         Output.delayMilliseconds(700);
         System.out.println("\n");
@@ -135,13 +95,10 @@ public static void storyMiddle2() {
         System.out.println();
         Output.type(" The warning lights are going off in the COMMS room though, might be risky.");
 
-        
         System.out.println("\n");
 
         Output.choices("Comms room STAT!", "Break down the door to garage!");
 
-
-       
         boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
@@ -162,9 +119,7 @@ public static void storyMiddle2() {
         }
     }
 
-
-       
-      public static void commsRoom() {
+    public static void commsRoom() {
         System.out.println();
         Output.type("Uh-oh this might have been a bad call");
         System.out.println();
@@ -277,10 +232,6 @@ public static void storyMiddle2() {
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
-        StoryMiddle.storyMiddle1();   // segway further into story
+        StoryMiddle.storyMiddle1(); // segway further into story
     }
 }
-
-
-
-      
