@@ -14,7 +14,6 @@ public class StoryMiddle {
        Output.type("Well I can not afford to sit around and find out, I gotta move");
 
        System.out.println();
-<<<<<<< HEAD
        Output.type("Wait");
        if (wait) {
             Output.type("I noticed a leak in the airline.");
@@ -27,8 +26,6 @@ public class StoryMiddle {
         
         Output.choices("Are you going to go outside to seal it?"," Will you go stay/wait in the greenhouse?");
 
-=======
->>>>>>> f5ecb6693a07797bc54444cd5978fded6c596dad
 
        Output.choices("Continue exploring base", "Wait for contact?");  //Choices output
        boolean validInput = false;
@@ -253,7 +250,7 @@ public static void storyMiddle2() {
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
-        StoryEnd.Ending();   // segway further into story
+        StoryMiddle.storyMiddle1();   // segway further into story
     }
 }
 
