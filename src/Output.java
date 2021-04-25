@@ -1,11 +1,16 @@
+//------------------------
+// Authors: Brayden Lemke
+// Details: A class of the basic functionality for the app.
+//------------------------
+
 import java.util.concurrent.TimeUnit;
 
 public class Output {
     public static void type(String theOutput, String... color) {
         for (int i = 0; i < theOutput.length(); i++) {
             try {
-                TimeUnit.MILLISECONDS.sleep(1);
-                System.out.print((color.length != 0 ? color[0] : "") + theOutput.charAt(i));
+                TimeUnit.MILLISECONDS.sleep(70);
+                System.out.print((color.length != 0 ? color[0] : Colors.ANSI_RESET) + theOutput.charAt(i));
             } catch (InterruptedException e) {
                 System.out.println("INTERRUPTED!!!");
             }

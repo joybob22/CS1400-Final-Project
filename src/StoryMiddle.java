@@ -1,10 +1,13 @@
+//------------------------
+// Authors: Isaac
+// Details: A class for the middle of the story
+//------------------------
+
 import java.util.Scanner;
 
 public class StoryMiddle {
 
     private static Scanner input = new Scanner(System.in);
-
-      
 
     public static void storyMiddle1() {
         Output.type("Door ahead is open! do I keep exploring or chance it? Wait, and hope?");
@@ -24,11 +27,6 @@ public class StoryMiddle {
             Output.type("You run to the garage and oxygen runs out...");
         }
         System.out.println("\n");
-        
-
-
-
-
 
         Output.choices("Continue exploring base", "Wait for contact?"); // Choices output
         boolean validInput = false;

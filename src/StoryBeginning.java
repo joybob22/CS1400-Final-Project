@@ -1,3 +1,8 @@
+//------------------------
+// Author: Brayden Lemke
+// Details: A class where the beginning of the story is.
+//------------------------
+
 import java.util.Scanner;
 
 public class StoryBeginning {

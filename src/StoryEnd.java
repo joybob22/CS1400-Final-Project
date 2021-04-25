@@ -1,3 +1,8 @@
+//------------------------
+// Authors: Ahmed
+// Details: A class where the end of the story is written
+//------------------------
+
 import java.util.Scanner;
 
 public class StoryEnd {
