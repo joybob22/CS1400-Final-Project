@@ -232,6 +232,6 @@ public class StoryMiddle {
         System.out.println();
         Output.delayWithDots(5);
         System.out.println();
-        StoryMiddle.storyMiddle1(); // segway further into story
+        StoryEnd.Ending(); // segway further into story
     }
 }
