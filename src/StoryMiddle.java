@@ -14,6 +14,7 @@ public class StoryMiddle {
        Output.type("Well I can not afford to sit around and find out, I gotta move");
 
        System.out.println();
+<<<<<<< HEAD
 
        Output.type("Wait");
 //        if (wait) {
@@ -23,12 +24,28 @@ public class StoryMiddle {
 //         } else {
 //             Output.type("You run to the garage and oxygen runs out...");
 //         }
+=======
+<<<<<<< HEAD
+       Output.type("Wait");
+       if (wait) {
+            Output.type("I noticed a leak in the airline.");
+            Output.delayMilliseconds(700);
+            Output.type("That will have to be fixed and you can continue, Or chance it and run.");
+        } else {
+            Output.type("You run to the garage and oxygen runs out...");
+        }
+>>>>>>> master
         System.out.println("\n");
         
         Output.choices("Are you going to go outside to seal it?"," Will you go stay/wait in the greenhouse?");
 
+=======
+>>>>>>> f5ecb6693a07797bc54444cd5978fded6c596dad
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
        Output.choices("Continue exploring base", "Wait for contact?");  //Choices output
        boolean validInput = false;
         while (!validInput) {
@@ -82,11 +99,19 @@ public static void storyMiddle2() {
         Output.type("Welp, I have nothing left to do but to wait");
         System.out.println();
         Output.delayWithDots(3);
+<<<<<<< HEAD
         System.out.println("\n");
         Output.type("Oh no wait... there is a crack in my helmet glass!");
         System.out.println("\n");
         Output.delayWithDots(3);
         System.out.println("\n");
+=======
+        System.out.println("\n");
+        Output.type("Oh no wait... there is a crack in my helmet glass!");
+        System.out.println("\n");
+        Output.delayWithDots(3);
+        System.out.println("\n");
+>>>>>>> master
         Output.type("If I started exploring i'd have died!");
         Output.type("let me patch that before moving on!");
 

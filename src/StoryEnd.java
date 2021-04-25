@@ -245,7 +245,7 @@ private static Scanner input = new Scanner(System.in);
       "\n And I won't have enough time to go check and come back. What do I do ?");
       System.out.println();
       Output.choices("Don't take the risk, just head to pod A immediately and get out of there. The base could blow up at any moment.",
-      "okay send 50 % fuel to the rocket, I just know that is the right amount.","okay send 30% fuel to the rocket, I just know that is  the right amount.");
+      "okay send 50 % fuel to the rocket, I just know that is the right amount.","okay send 30% fuel to the rocket, I just know that is the right amount.");
        boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
@@ -328,7 +328,7 @@ private static Scanner input = new Scanner(System.in);
 
    }
    public static void scene6a(){
-      Output.type("you’re right, this base could blow up again at any moment I don’t have time to waste, I'm heading straight to Pod A." +
+      Output.type("you're right, this base could blow up again at any moment I don’t have time to waste, I'm heading straight to Pod A." +
       "\n Okay I see the pod entrance..." + 
       "\n I'm in, the computer should be here...." + 
       "\n I found it ! and it's intact, this is a miracle ! Okay let's see what kind of condition the rocket is in." +
@@ -370,12 +370,12 @@ private static Scanner input = new Scanner(System.in);
    
   public static void scene1a(){
    System.out.println();
-   Output.type("I think you’re right, the rocket could be useless for all I know. In that case I'll need to find the Rover and get it running." + 
+   Output.type("I think you're right, the rocket could be useless for all I know. In that case I'll need to find the Rover and get it running." + 
    "\n There is no other way of reaching the other base on foot, it's about 40 miles south from here. The rover is stored in Pod B on the eastern side of the base." + 
    "\n To get there I would need to go outside and go all the way around the base to reach it. I already know the route but it will take me over an hour to get there. " +
    "\n I could scout the area and potentially find a quicker route. What do you think i should do ? ");
    System.out.println();
-   Output.choices("Take the longer the route, it's safer. If you scout the area you’re not guaranteed to find a quicker route and the other route could be dangerous.",
+   Output.choices("Take the longer the route, it's safer. If you scout the area you're not guaranteed to find a quicker route and the other route could be dangerous.",
    "Scout the area and try finding a quicker route, the faster you can reach that roover the faster you can make it to safety."); 
     boolean validInput = false;
         while (!validInput) {
@@ -436,7 +436,6 @@ private static Scanner input = new Scanner(System.in);
        
        Output.choices("Yes do a check, you might need to make sure it has enough fuel, if you run out of fuel on the way you’re dead.",
        "No! Get the hell out of there, you don’t time to do that. Get in that Rover and start heading to the other base NOW!");
-       System.out.println();
        boolean validInput = false;
         while (!validInput) {
             System.out.print("\nEnter choice: ");
@@ -469,13 +468,13 @@ private static Scanner input = new Scanner(System.in);
 
    public static void scene3a(){
       System.out.println();
-      Output.type(" You’re right, what am I thinking, this base could blow up at any moment I don't have time to check." +
-       "\n I’m making my way to the other base, the trip should take a hour and half.... " + 
+      Output.type(" You're right, what am I thinking, this base could blow up at any moment I don't have time to check." +
+       "\n I'm making my way to the other base, the trip should take a hour and half.... " + 
        "\n 20 mins, everything is going fine, I can’t believe i made it out of there alive..." +
-       "\n 40 mins in…. Oh no, the Rover has slowed down, I don’t know what is going on, please god don’t let it be running out of fuel... " +
+       "\n 40 mins in…. Oh no, the Rover has slowed down, I don't know what is going on, please god don’t let it be running out of fuel... " +
        "\n 1 hour in…….. The Rover has come to complete stop , this is it ! i'm done For !" +
-       "\n You bastard, I shouldn’t have never listened to you ! Now I'm going to die out here and it's all your fault ! "+
-       "\n I hope you’re happy, your terrible advice is going to get me killed, I hope this weighs on your conscience for the rest of your life ! " +
+       "\n You bastard, I shouldn't have never listened to you ! Now I'm going to die out here and it's all your fault ! "+
+       "\n I hope you're happy, your terrible advice is going to get me killed, I hope this weighs on your conscience for the rest of your life ! " +
        "\n Tyler dies a cold and lonely death on the way to the other Rover base.");
        System.out.println();
         Output.choices("Go back to last crusial desison", " end game");
