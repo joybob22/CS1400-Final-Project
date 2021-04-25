@@ -14,6 +14,21 @@ public class StoryMiddle {
        Output.type("Well I can not afford to sit around and find out, I gotta move");
 
        System.out.println();
+<<<<<<< HEAD
+       Output.type("Wait");
+       if (wait) {
+            Output.type("I noticed a leak in the airline.");
+            Output.delayMilliseconds(700);
+            Output.type("That will have to be fixed and you can continue, Or chance it and run.");
+        } else {
+            Output.type("You run to the garage and oxygen runs out...");
+        }
+        System.out.println("\n");
+        
+        Output.choices("Are you going to go outside to seal it?"," Will you go stay/wait in the greenhouse?");
+
+=======
+>>>>>>> f5ecb6693a07797bc54444cd5978fded6c596dad
 
        Output.choices("Continue exploring base", "Wait for contact?");  //Choices output
        boolean validInput = false;
