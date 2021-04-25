@@ -14,6 +14,10 @@ public class StoryMiddle {
        Output.type("Well I can not afford to sit around and find out, I gotta move");
 
        System.out.println();
+
+
+       Output.type("Wait");
+
        Output.type("Wait");
        if (wait) {
             Output.type("I noticed a leak in the airline.");
@@ -25,6 +29,8 @@ public class StoryMiddle {
         System.out.println("\n");
         
         Output.choices("Are you going to go outside to seal it?"," Will you go stay/wait in the greenhouse?");
+
+
 
 
        Output.choices("Continue exploring base", "Wait for contact?");  //Choices output
@@ -80,6 +86,12 @@ public static void storyMiddle2() {
         Output.type("Welp, I have nothing left to do but to wait");
         System.out.println();
         Output.delayWithDots(3);
+
+        System.out.println("\n");
+        Output.type("Oh no wait... there is a crack in my helmet glass!");
+        System.out.println("\n");
+        Output.delayWithDots(3);
+        System.out.println("\n");
         System.out.println("\n");
         Output.type("Oh no wait... there is a crack in my helmet glass!");
         System.out.println("\n");
